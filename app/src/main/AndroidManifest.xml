@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.alessanderleite.alarmmanagerexample">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- registering the receiver -->
+
+        <receiver
+            android:name=".MayAlarm"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>
